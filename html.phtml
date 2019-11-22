@@ -15,34 +15,39 @@
  */
 namespace OP;
 
+/** Used class.
+ *
+ */
+
+/* @var $app    \OP\UNIT\App */
+/* @var $content string      */
 ?>
 <!doctype html>
-<html lang="<?= Env::Lang() ?>">
+<html lang="<?= $app->Env()->Lang() ?>">
 	<head>
-		<?php App::Template('head.phtml') ?>
+		<?= $app->Template('layout/head.phtml') ?>
 	</head>
 	<body id="body" class="body">
 		<div id="head-area">
-			<?= App::Template('header.phtml') ?>
-			<?= App::Template('menu/top.phtml') ?>
+			<?= $app->Template('layout/header.phtml') ?>
+			<?= $app->Template('layout/menu/top.phtml') ?>
 		</div>
 		<div id="body-area">
 			<div>
 				<!-- left menu -->
-				<?= App::Template('menu/left.phtml') ?>
+				<?= $app->Template('layout/menu/left.phtml') ?>
 			</div>
 			<div id="content-area" class="content-area">
 				<?= $content ?>
 			</div>
 			<div>
 				<!-- right menu -->
-				<?= App::Template('menu/right.phtml') ?>
+				<?= $app->Template('layout/menu/right.phtml') ?>
 			</div>
 		</div>
 		<div id="foot-area">
-			<?php App::Template('menu/bottom.phtml') ?>
-			<?php App::Template('footer.phtml') ?>
+			<?= $app->Template('layout/menu/bottom.phtml') ?>
+			<?= $app->Template('layout/footer.phtml') ?>
 		</div>
-		<?= App::Template('google-analytics.phtml') ?>
 	</body>
 </html>

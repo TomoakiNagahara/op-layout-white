@@ -21,6 +21,26 @@ body.body {
 	1px solid black;
 }
 
+body.body h1 {
+	color: #555;
+}
+
+body.body h2 {
+	color: blue;
+}
+
+body.body h3 {
+	color: green;
+}
+
+body.body h4 {
+	color: purple;
+}
+
+body.body h5 {
+	color: orange;
+}
+
 @media (prefers-color-scheme: dark) {
 	body.body {
 		background-color: #38444c;
